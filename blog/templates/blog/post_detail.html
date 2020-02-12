@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://fonts.googleapis.com/css?family=Pattaya&display=swap" rel="stylesheet">
+    <script>
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://EXAMPLE.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+    </script>
+    <style>
+        .box{
+            display:inline-block;
+            margin:70px;
+            border:1px solid lightgray;
+            width:1000px;; height:auto;
+        }
+        img{
+            display:block;
+            margin:auto;
+            width:400px; height:400px;
+        }
+        .label{
+            font-family: 'Pattaya', sans-serif;
+            color:orangered;
+            font-size:30px;
+        }
+        .a{
+            color:gray
+            font-size:10px;
+            margin-left:20px;
+        }
+        #title{
+            font-family: 'Pattaya', sans-serif;
+            color:black;
+            font-size:60px;
+            text-align:center;
+        }
+        .thread{
+            width:auto;
+            margin:10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <h1 id="title">{{ object.title }}</h1>
+    <div>
+        <p class="a"><span class="label">Description:</span> {{ object.description }}</p>
+        <p class="a"><span class="label">Create Date:</span> {{ object.create_date }}</p>
+        <p class="a"><span class="label">Modify Date:</span> {{ object.modify_date }}</p>
+        <img src="{{ object.image.url }}" width="600" height="600">
+        <div id="disqus_thread" class="thread"></div>
+    </div>
+</div>
+</body>
+</html>
